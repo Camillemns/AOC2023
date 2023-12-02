@@ -9,8 +9,7 @@ val WordToSafeDigits = Map(
   "six" -> "six6six",
   "seven" -> "seven7seven",
   "eight" -> "eight8eight",
-  "nine" -> "nine9nine",
-  "zero" -> "zero0zero"
+  "nine" -> "nine9nine"
 )
 
 def get_calibration(str: String) : Int =
@@ -22,7 +21,7 @@ def get_calibration(str: String) : Int =
 
 
 def replace_word_by_digits(str: String) : String =
-  val clean = WordToSafeDigits.foldLeft(str) { case (cur, (from, to)) => cur.replaceFirst(from, to) }
+  val clean = WordToSafeDigits.foldLeft(str) { case (cur, (from, to)) => cur.replaceAll(from, to) }
   return clean
 
 
