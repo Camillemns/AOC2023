@@ -1,10 +1,15 @@
 import helper.*
 import day1.*
+import day2.*
 
 val DayToSolution = Map(
   1 -> Map( 
     1 -> day1.solve_1, 
     2 -> day1.solve_2
+  ),
+  2 -> Map(
+    1 -> day2.solve_1,
+    2 -> day2.solve_2
   )
 )
 
